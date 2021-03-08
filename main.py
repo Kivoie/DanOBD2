@@ -84,13 +84,12 @@ button3.place(x = 10, y = 70)
 scroll = Scrollbar(obdGUI, takefocus=0)
 console = Text(obdGUI, width = 64, height = 55, yscrollcommand = scroll.set)                #textbox dimensions
 console.place(x=812, y=0)                                                                   #textbox coordinates
+console.config(background = "black", foreground = "yellow")
 scroll.pack(side="right", fill=Y)
 scroll.config(command=console.yview)
 enableText = console.config(state=NORMAL)
 console.insert(END, ("Available ports: " + str(ports)))
 disableText = console.config(state=DISABLED)
-
-
 
 obdGUI.mainloop()               #start the program
 
